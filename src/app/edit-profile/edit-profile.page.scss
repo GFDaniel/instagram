@@ -1,0 +1,126 @@
+*{
+    outline: none;
+}
+
+.ionButtonMenu{
+    color: #C13584;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+$white-color: #fff;
+$height100: 100%;
+
+ion-grid {
+    width:100%;
+    height: $height100;
+    background: #dfdfdf;
+}
+
+ion-row {
+    height: $height100;
+}
+
+ion-col {
+    background: $white-color;
+}
+
+.button {
+    margin: 0%;
+    padding: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    color: white;
+    font-size: 15px;
+    background-color: #C13584;
+    border-radius: 20px;
+    height: 30px;
+    width: 150px;
+}
+
+@media (min-width: 240px) and (max-width: 768px) {
+    ion-grid {
+        background: $white-color;
+    }
+    ion-col {
+        border: none;
+    }
+}
+
+.containerInputs{
+    margin-bottom: 5px;
+}
+
+.lostPassword{
+    margin: 0%;
+    padding: 0%;
+    margin-bottom: 13px;
+    text-align: right;
+    font-weight: 300;
+    font-size: 16px;
+    color: gray;
+}
+
+.register1{
+    margin: 0%;
+    padding: 0%;
+    margin-top: 60px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    color: gray;
+}
+
+.register2{
+    margin: 0%;
+    padding: 0%;
+    margin-top: 10px;
+    text-align: center;
+    color: #C13584;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.mainContainer{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.ImgContainer{
+    margin: 0px;
+    padding: 0px;
+}
+
+.Avatar{
+    margin: 0px;
+    padding: 0px;
+    height: 150px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Avatar1{
+    height: 150px;
+    width: 150px;
+}
+
+
+.button1 {
+    margin: 0%;
+    padding: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    color: white;
+    font-size: 15px;
+    background-color: grey;
+    border-radius: 20px;
+    height: 30px;
+    width: 150px;
+}

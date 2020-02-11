@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{name}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="Card">
+    <ion-row>
+      <ion-col>
+        <div class="container-img">
+          <ion-avatar class="Avatar">
+            <img class="Avatar1" [src]="downloadUrl | async" *ngIf="downloadUrl | async">
+          </ion-avatar>
+        </div>
+      </ion-col>
+      <ion-col>
+        <p> </p>
+      </ion-col>
+      <ion-col>
+        <p> </p>
+      </ion-col>
+      <ion-col>
+        <p> </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <div>
+          <p id="name">{{name}} {{lastname}}</p>
+          <p id="name">{{description}} </p>
+        </div>
+    </ion-row> 
+  </ion-grid>
+  
+  <ion-grid class="icons">
+    <ion-row>
+      <ion-col (click)="addPost()">
+        <ion-icon name="add-circle"></ion-icon>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col (click)="editProfile()">
+        <ion-icon name="settings"></ion-icon>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col (click)="logout()">        
+        <ion-icon name="power"></ion-icon>
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
+
+  
+  
+    <ion-list class="PostList" *ngFor="let post of arrPost">
+      <div class="divContainerPost">
+        <ion-item-divider class="divider"></ion-item-divider>
+        <ion-grid class="gridPost">
+          <ion-row>
+            <ion-col class="colPost">
+              <ion-avatar class="Avatar">
+                <img class="Avatar2" [src]="downloadUrl | async" *ngIf="downloadUrl | async">
+              </ion-avatar>
+            </ion-col>
+            <ion-col class="colPost">
+              <p id="name">{{name}}</p>
+            </ion-col>
+            <ion-col class="colPost"></ion-col>
+            <ion-col class="colPost"></ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="imgPostDiv">
+          <img class="ImgPost" [src]="post.url">
+        </div>
+        <div>
+          <p>{{post.description}}</p>
+        </div>
+      </div>
+    </ion-list>
+  
+</ion-content>
+

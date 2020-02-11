@@ -1,0 +1,45 @@
+<ion-content padding>
+  <div>
+    <ion-buttons class="ionButtonMenu" slot="start">
+      <ion-icon routerLink="/home" slot="start" name="arrow-round-back"></ion-icon>
+    </ion-buttons>
+  </div>
+
+  <ion-grid class="mainContainer">
+    <ion-row justify-content-center class="row">
+      <ion-col size-md="6" size-lg="5" size-xs="12">
+        <div class="containerInputs">
+          <ion-item>
+            <ion-avatar class="Avatar">
+              <img class="Avatar1" [src]="downloadUrl | async" *ngIf="downloadUrl | async">
+            </ion-avatar>
+          </ion-item>
+          
+          <ion-item>
+            <button class="button1" (click)="openGalery()" expand="block">Change photo</button>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="name" placeholder="Name" minlength="2" maxlength="15"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="lastname" placeholder="Lastname" minlength="2" maxlength="15"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="description" placeholder="Description" minlength="4"></ion-input>
+          </ion-item>
+
+          
+        </div>
+        
+        <div padding class="containerButton">
+          <button class="button" (click)="saveUser(name, lastname, description)">Save</button>
+        </div>
+        
+      </ion-col>
+    </ion-row>
+     
+  </ion-grid>
+
+</ion-content>
